@@ -1,8 +1,16 @@
+/* Do NOT edit styles/components/_sprite.css directly as it is generated automatically by Gulp */
+/* Insted edit gulp/templates/sprite.css */
+
 {{#shapes}}
- .icon--{{base}} {
-     width: {{width.outer}}px;
-     height: {{height.outer}}px;
-     background-image: url('/public/sprite/css/{{{sprite}}}');
-     background-position: {{position.relative.xy}};
+    {{#first}}
+    .icon {
+        background-image: url('/assets/images/sprites/{{{sprite}}}');
+    }
+    {{/first}}
+
+    .icon--{{base}} {
+        width: {{width.outer}}px;
+        height: {{height.outer}}px;
+        background-position: {{position.relative.xy}};
  }
 {{/shapes}}
